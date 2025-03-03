@@ -23,8 +23,7 @@ jobs:
         run: |
           git clone --depth=1 https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9 -b android11-release aarch64-linux-android-4.9
           git clone --depth=1 https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9 -b android11-release arm-linux-androideabi-4.9
-          wget https://github.com/ZyCromerZ/Clang/releases/download/21.0.0git-20250303-release/Clang-21.0.0git-20250303.tar.gz
-          tar -xf Clang-21.0.0git-20250303.tar.gz
+          wget https://github.com/ZyCromerZ/Clang/releases/download/21.0.0git-20250303-release/Clang-21.0.0git-20250303.tar.gz ; tar -xf Clang-21.0.0git-20250303.tar.gz
           sudo apt-get update 
           sudo apt-get install -y bc curl git zip ftp libssl-dev lftp zstd wget libfl-dev python2 python3 libarchive-tools
 
