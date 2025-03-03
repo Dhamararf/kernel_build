@@ -23,7 +23,7 @@ jobs:
         run: |
           git clone --depth=1 https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9 -b android11-release aarch64-linux-android-4.9
           git clone --depth=1 https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9 -b android11-release arm-linux-androideabi-4.9
-          mkdir clang && curl https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/android11-release/clang-r383902.tar.gz -RLO && tar -C clang/ -xf clang-*.tar.gz
+          mkdir clang && wget https://github.com/ZyCromerZ/Clang/releases/download/21.0.0git-20250303-release/Clang-21.0.0git-20250303.tar.gz -RLO && tar -C clang/ -xf clang-*.tar.gz
           sudo apt-get update 
           sudo apt-get install -y bc curl git zip ftp libssl-dev lftp zstd wget libfl-dev python2 python3 libarchive-tools
 
@@ -33,7 +33,7 @@ jobs:
 
       - name: Build kernel
         run: |
-          export KBUILD_BUILD_USER="Dham"
+          export KBUILD_BUILD_USER="DhamarAr"
           export KBUILD_BUILD_HOST="Ordinary-Being"
           export PATH=$GITHUB_WORKSPACE/clang/bin:${PATH}
           args="                  ARCH=arm64 \
